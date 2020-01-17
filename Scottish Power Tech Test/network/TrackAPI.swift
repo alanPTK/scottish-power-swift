@@ -22,15 +22,9 @@ class TrackAPI: APIHandler {
         return request
     }
     
-    func parseResponse(data: Data) throws -> TrackModel {
+    func parseResponse(data: Data) throws -> ResultModel {
         print(data)
         return try defaultParseResponse(data: data)
     }
 
-}
-
-struct TrackModel: Response {
-    
-    var resultCount: Int
-    
 }

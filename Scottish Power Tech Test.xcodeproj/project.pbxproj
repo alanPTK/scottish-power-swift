@@ -19,6 +19,7 @@
 		DB3E094B23D23AC900400D6E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094A23D23AC900400D6E /* NetworkError.swift */; };
 		DB3E094E23D23CC600400D6E /* TrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094D23D23CC600400D6E /* TrackAPI.swift */; };
 		DB3E095123D23DA300400D6E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E095023D23DA300400D6E /* AppConstants.swift */; };
+		DB3E095423D24B4500400D6E /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E095323D24B4500400D6E /* ResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DB3E094A23D23AC900400D6E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		DB3E094D23D23CC600400D6E /* TrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackAPI.swift; sourceTree = "<group>"; };
 		DB3E095023D23DA300400D6E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		DB3E095323D24B4500400D6E /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		DB3E092C23D20F0600400D6E /* Scottish Power Tech Test */ = {
 			isa = PBXGroup;
 			children = (
+				DB3E095223D24B3400400D6E /* model */,
 				DB3E094F23D23D8F00400D6E /* utils */,
 				DB3E094C23D23B2B00400D6E /* common */,
 				DB3E094123D238F800400D6E /* network */,
@@ -107,6 +110,14 @@
 				DB3E095023D23DA300400D6E /* AppConstants.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		DB3E095223D24B3400400D6E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DB3E095323D24B4500400D6E /* ResponseModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				DB3E094923D2394400400D6E /* Reachability.swift in Sources */,
 				DB3E093223D20F0600400D6E /* ViewController.swift in Sources */,
 				DB3E092E23D20F0600400D6E /* AppDelegate.swift in Sources */,
+				DB3E095423D24B4500400D6E /* ResponseModel.swift in Sources */,
 				DB3E094523D2391F00400D6E /* APILoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

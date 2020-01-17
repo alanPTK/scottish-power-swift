@@ -9,26 +9,20 @@
 import Foundation
 
 protocol RequestHandler {
-    
     associatedtype RequestDataType
     
     func makeRequest(from data: RequestDataType) -> Request
-    
 }
 
 protocol ResponseHandler {
-    
     associatedtype ResponseDataType
     
     func parseResponse(data: Data) throws -> ResponseDataType
-    
 }
 
 typealias APIHandler = RequestHandler & ResponseHandler
 
-protocol Response: Codable {
-    
-}
+protocol Response: Codable {}
 
 extension RequestHandler {
     

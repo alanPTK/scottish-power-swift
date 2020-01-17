@@ -7,17 +7,13 @@
 //
 
 struct NetworkError: Error {
-    
     let message: String
-    
 }
 
 struct UnknownParseError: Error { }
 
 struct ServiceError: Error, Codable {
-    
     let httpStatus: Int
     let message: String
-    let description: String
-    
+    let description: String    
 }
