@@ -12,6 +12,13 @@
 		DB3E093523D20F0600400D6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3E093323D20F0600400D6E /* Main.storyboard */; };
 		DB3E093723D20F0800400D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3E093623D20F0800400D6E /* Assets.xcassets */; };
 		DB3E093A23D20F0800400D6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3E093823D20F0800400D6E /* LaunchScreen.storyboard */; };
+		DB3E094323D2391100400D6E /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094223D2391100400D6E /* APIHandler.swift */; };
+		DB3E094523D2391F00400D6E /* APILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094423D2391F00400D6E /* APILoader.swift */; };
+		DB3E094723D2392F00400D6E /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094623D2392F00400D6E /* BaseRequest.swift */; };
+		DB3E094923D2394400400D6E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094823D2394400400D6E /* Reachability.swift */; };
+		DB3E094B23D23AC900400D6E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094A23D23AC900400D6E /* NetworkError.swift */; };
+		DB3E094E23D23CC600400D6E /* TrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094D23D23CC600400D6E /* TrackAPI.swift */; };
+		DB3E095123D23DA300400D6E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E095023D23DA300400D6E /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		DB3E093623D20F0800400D6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB3E093923D20F0800400D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB3E093B23D20F0800400D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB3E094223D2391100400D6E /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		DB3E094423D2391F00400D6E /* APILoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILoader.swift; sourceTree = "<group>"; };
+		DB3E094623D2392F00400D6E /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		DB3E094823D2394400400D6E /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		DB3E094A23D23AC900400D6E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		DB3E094D23D23CC600400D6E /* TrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackAPI.swift; sourceTree = "<group>"; };
+		DB3E095023D23DA300400D6E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,9 @@
 		DB3E092C23D20F0600400D6E /* Scottish Power Tech Test */ = {
 			isa = PBXGroup;
 			children = (
+				DB3E094F23D23D8F00400D6E /* utils */,
+				DB3E094C23D23B2B00400D6E /* common */,
+				DB3E094123D238F800400D6E /* network */,
 				DB3E092D23D20F0600400D6E /* AppDelegate.swift */,
 				DB3E093123D20F0600400D6E /* ViewController.swift */,
 				DB3E093323D20F0600400D6E /* Main.storyboard */,
@@ -62,6 +79,34 @@
 				DB3E093B23D20F0800400D6E /* Info.plist */,
 			);
 			path = "Scottish Power Tech Test";
+			sourceTree = "<group>";
+		};
+		DB3E094123D238F800400D6E /* network */ = {
+			isa = PBXGroup;
+			children = (
+				DB3E094223D2391100400D6E /* APIHandler.swift */,
+				DB3E094423D2391F00400D6E /* APILoader.swift */,
+				DB3E094623D2392F00400D6E /* BaseRequest.swift */,
+				DB3E094A23D23AC900400D6E /* NetworkError.swift */,
+				DB3E094D23D23CC600400D6E /* TrackAPI.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		DB3E094C23D23B2B00400D6E /* common */ = {
+			isa = PBXGroup;
+			children = (
+				DB3E094823D2394400400D6E /* Reachability.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		DB3E094F23D23D8F00400D6E /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				DB3E095023D23DA300400D6E /* AppConstants.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +180,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB3E094E23D23CC600400D6E /* TrackAPI.swift in Sources */,
+				DB3E095123D23DA300400D6E /* AppConstants.swift in Sources */,
+				DB3E094723D2392F00400D6E /* BaseRequest.swift in Sources */,
+				DB3E094B23D23AC900400D6E /* NetworkError.swift in Sources */,
+				DB3E094323D2391100400D6E /* APIHandler.swift in Sources */,
+				DB3E094923D2394400400D6E /* Reachability.swift in Sources */,
 				DB3E093223D20F0600400D6E /* ViewController.swift in Sources */,
 				DB3E092E23D20F0600400D6E /* AppDelegate.swift in Sources */,
+				DB3E094523D2391F00400D6E /* APILoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
