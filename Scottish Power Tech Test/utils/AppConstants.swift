@@ -14,4 +14,8 @@ struct Constants {
         static let trackAPIUrl = URL(string: "https://itunes.apple.com/search?term=rock&media=music")!
     }
     
+    struct CELLS {
+        static let trackCellIdentifier = "trackCell"
+    }
+    
 }

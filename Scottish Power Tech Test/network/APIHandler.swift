@@ -26,6 +26,7 @@ protocol Response: Codable {}
 
 extension RequestHandler {
     
+    /* Set the request data */
     func set(_ parameters: [String: Any], urlRequest: inout URLRequest) {
         if parameters.count != 0 {
             if let jsonData = try? JSONSerialization.data(withJSONObject: parameters, options: []) {
@@ -38,6 +39,7 @@ extension RequestHandler {
 
 extension ResponseHandler {
     
+    /* Parse the response into the model */
     func defaultParseResponse<T: Response>(data: Data) throws -> T {
         let jsonDecoder = JSONDecoder()
         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase

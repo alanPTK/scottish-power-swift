@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1D089523D25C7B00532E80 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D089423D25C7B00532E80 /* TrackTableViewCell.swift */; };
+		DB1D089923D25CA600532E80 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D089823D25CA600532E80 /* TrackListViewController.swift */; };
+		DB1D089C23D25CCA00532E80 /* TrackListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D089B23D25CCA00532E80 /* TrackListPresenter.swift */; };
+		DB1D089E23D25CD800532E80 /* TrackListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D089D23D25CD800532E80 /* TrackListDelegate.swift */; };
 		DB3E092E23D20F0600400D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E092D23D20F0600400D6E /* AppDelegate.swift */; };
-		DB3E093223D20F0600400D6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E093123D20F0600400D6E /* ViewController.swift */; };
 		DB3E093523D20F0600400D6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3E093323D20F0600400D6E /* Main.storyboard */; };
 		DB3E093723D20F0800400D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3E093623D20F0800400D6E /* Assets.xcassets */; };
 		DB3E093A23D20F0800400D6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3E093823D20F0800400D6E /* LaunchScreen.storyboard */; };
@@ -34,9 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB1D089423D25C7B00532E80 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		DB1D089823D25CA600532E80 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
+		DB1D089B23D25CCA00532E80 /* TrackListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListPresenter.swift; sourceTree = "<group>"; };
+		DB1D089D23D25CD800532E80 /* TrackListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListDelegate.swift; sourceTree = "<group>"; };
 		DB3E092A23D20F0600400D6E /* Scottish Power Tech Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scottish Power Tech Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3E092D23D20F0600400D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB3E093123D20F0600400D6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB3E093423D20F0600400D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB3E093623D20F0800400D6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB3E093923D20F0800400D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB1D089623D25C7F00532E80 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DB1D089423D25C7B00532E80 /* TrackTableViewCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DB1D089723D25C8C00532E80 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB1D089823D25CA600532E80 /* TrackListViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		DB1D089A23D25CBA00532E80 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DB1D089B23D25CCA00532E80 /* TrackListPresenter.swift */,
+				DB1D089D23D25CD800532E80 /* TrackListDelegate.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
 		DB3E092123D20F0600400D6E = {
 			isa = PBXGroup;
 			children = (
@@ -94,12 +125,14 @@
 		DB3E092C23D20F0600400D6E /* Scottish Power Tech Test */ = {
 			isa = PBXGroup;
 			children = (
+				DB1D089A23D25CBA00532E80 /* presenter */,
+				DB1D089723D25C8C00532E80 /* controller */,
+				DB1D089623D25C7F00532E80 /* view */,
 				DB3E095223D24B3400400D6E /* model */,
 				DB3E094F23D23D8F00400D6E /* utils */,
 				DB3E094C23D23B2B00400D6E /* common */,
 				DB3E094123D238F800400D6E /* network */,
 				DB3E092D23D20F0600400D6E /* AppDelegate.swift */,
-				DB3E093123D20F0600400D6E /* ViewController.swift */,
 				DB3E093323D20F0600400D6E /* Main.storyboard */,
 				DB3E093623D20F0800400D6E /* Assets.xcassets */,
 				DB3E093823D20F0800400D6E /* LaunchScreen.storyboard */,
@@ -262,15 +295,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB3E094E23D23CC600400D6E /* TrackAPI.swift in Sources */,
+				DB1D089C23D25CCA00532E80 /* TrackListPresenter.swift in Sources */,
 				DB3E095123D23DA300400D6E /* AppConstants.swift in Sources */,
 				DB3E094723D2392F00400D6E /* BaseRequest.swift in Sources */,
 				DB3E094B23D23AC900400D6E /* NetworkError.swift in Sources */,
 				DB3E094323D2391100400D6E /* APIHandler.swift in Sources */,
 				DB3E094923D2394400400D6E /* Reachability.swift in Sources */,
-				DB3E093223D20F0600400D6E /* ViewController.swift in Sources */,
 				DB3E092E23D20F0600400D6E /* AppDelegate.swift in Sources */,
+				DB1D089923D25CA600532E80 /* TrackListViewController.swift in Sources */,
+				DB1D089E23D25CD800532E80 /* TrackListDelegate.swift in Sources */,
 				DB3E095423D24B4500400D6E /* ResponseModel.swift in Sources */,
 				DB3E094523D2391F00400D6E /* APILoader.swift in Sources */,
+				DB1D089523D25C7B00532E80 /* TrackTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
