@@ -20,7 +20,18 @@
 		DB3E094E23D23CC600400D6E /* TrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094D23D23CC600400D6E /* TrackAPI.swift */; };
 		DB3E095123D23DA300400D6E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E095023D23DA300400D6E /* AppConstants.swift */; };
 		DB3E095423D24B4500400D6E /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E095323D24B4500400D6E /* ResponseModel.swift */; };
+		DB3E096B23D252B500400D6E /* TrackAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E096A23D252B500400D6E /* TrackAPITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB3E096423D251CB00400D6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB3E092223D20F0600400D6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB3E092923D20F0600400D6E;
+			remoteInfo = "Scottish Power Tech Test";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DB3E092A23D20F0600400D6E /* Scottish Power Tech Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scottish Power Tech Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,10 +49,20 @@
 		DB3E094D23D23CC600400D6E /* TrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackAPI.swift; sourceTree = "<group>"; };
 		DB3E095023D23DA300400D6E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		DB3E095323D24B4500400D6E /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		DB3E095F23D251CB00400D6E /* Scottish Power Tech Test Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scottish Power Tech Test Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB3E096323D251CB00400D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB3E096A23D252B500400D6E /* TrackAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackAPITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DB3E092723D20F0600400D6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3E095C23D251CB00400D6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,7 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				DB3E092C23D20F0600400D6E /* Scottish Power Tech Test */,
+				DB3E096023D251CB00400D6E /* Scottish Power Tech Test Unit Tests */,
 				DB3E092B23D20F0600400D6E /* Products */,
+				DB3E095823D2517B00400D6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				DB3E092A23D20F0600400D6E /* Scottish Power Tech Test.app */,
+				DB3E095F23D251CB00400D6E /* Scottish Power Tech Test Unit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +144,22 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		DB3E095823D2517B00400D6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB3E096023D251CB00400D6E /* Scottish Power Tech Test Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DB3E096323D251CB00400D6E /* Info.plist */,
+				DB3E096A23D252B500400D6E /* TrackAPITests.swift */,
+			);
+			path = "Scottish Power Tech Test Unit Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +180,24 @@
 			productReference = DB3E092A23D20F0600400D6E /* Scottish Power Tech Test.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DB3E095E23D251CB00400D6E /* Scottish Power Tech Test Unit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB3E096623D251CB00400D6E /* Build configuration list for PBXNativeTarget "Scottish Power Tech Test Unit Tests" */;
+			buildPhases = (
+				DB3E095B23D251CB00400D6E /* Sources */,
+				DB3E095C23D251CB00400D6E /* Frameworks */,
+				DB3E095D23D251CB00400D6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB3E096523D251CB00400D6E /* PBXTargetDependency */,
+			);
+			name = "Scottish Power Tech Test Unit Tests";
+			productName = "Scottish Power Tech Test Unit Tests";
+			productReference = DB3E095F23D251CB00400D6E /* Scottish Power Tech Test Unit Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -152,6 +210,10 @@
 				TargetAttributes = {
 					DB3E092923D20F0600400D6E = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					DB3E095E23D251CB00400D6E = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = DB3E092923D20F0600400D6E;
 					};
 				};
 			};
@@ -169,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				DB3E092923D20F0600400D6E /* Scottish Power Tech Test */,
+				DB3E095E23D251CB00400D6E /* Scottish Power Tech Test Unit Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -181,6 +244,13 @@
 				DB3E093A23D20F0800400D6E /* LaunchScreen.storyboard in Resources */,
 				DB3E093723D20F0800400D6E /* Assets.xcassets in Resources */,
 				DB3E093523D20F0600400D6E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3E095D23D251CB00400D6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +274,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DB3E095B23D251CB00400D6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3E096B23D252B500400D6E /* TrackAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB3E096523D251CB00400D6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB3E092923D20F0600400D6E /* Scottish Power Tech Test */;
+			targetProxy = DB3E096423D251CB00400D6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DB3E093323D20F0600400D6E /* Main.storyboard */ = {
@@ -378,6 +464,48 @@
 			};
 			name = Release;
 		};
+		DB3E096723D251CB00400D6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RGKH9LP28R;
+				INFOPLIST_FILE = "Scottish Power Tech Test Unit Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fabeni.Scottish-Power-Tech-Test-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scottish Power Tech Test.app/Scottish Power Tech Test";
+			};
+			name = Debug;
+		};
+		DB3E096823D251CB00400D6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RGKH9LP28R;
+				INFOPLIST_FILE = "Scottish Power Tech Test Unit Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fabeni.Scottish-Power-Tech-Test-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scottish Power Tech Test.app/Scottish Power Tech Test";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -395,6 +523,15 @@
 			buildConfigurations = (
 				DB3E093F23D20F0800400D6E /* Debug */,
 				DB3E094023D20F0800400D6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB3E096623D251CB00400D6E /* Build configuration list for PBXNativeTarget "Scottish Power Tech Test Unit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3E096723D251CB00400D6E /* Debug */,
+				DB3E096823D251CB00400D6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -25,7 +25,7 @@ class APILoader<T: APIHandler > {
             return completionHandler(nil, NetworkError(message: "No internet connection"))
         }
         
-        let urlRequest = apiRequest.makeRequest(from: requestData).urlRequest
+        let urlRequest = apiRequest.makeRequest(with: requestData).urlRequest
         urlSession.dataTask(with: urlRequest) { data, response, error in
             guard let data = data else { return completionHandler(nil, error) }
             

@@ -10,7 +10,7 @@ import UIKit
 
 class TrackAPI: APIHandler {
     
-    func makeRequest(from parameters: [String: Any]) -> Request {
+    func makeRequest(with parameters: [String: Any]) -> Request {
         let url = Constants.URLS.trackAPIUrl
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
@@ -22,8 +22,7 @@ class TrackAPI: APIHandler {
         return request
     }
     
-    func parseResponse(data: Data) throws -> ResultModel {
-        print(data)
+    func parseResponse(data: Data) throws -> ResultModel {        
         return try defaultParseResponse(data: data)
     }
 

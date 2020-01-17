@@ -11,7 +11,7 @@ import Foundation
 protocol RequestHandler {
     associatedtype RequestDataType
     
-    func makeRequest(from data: RequestDataType) -> Request
+    func makeRequest(with parameters: RequestDataType) -> Request
 }
 
 protocol ResponseHandler {

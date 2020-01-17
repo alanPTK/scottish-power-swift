@@ -15,8 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let trackApi = TrackAPI()
-        //let request = trackApi.makeRequest(from: [:])
+        let trackApi = TrackAPI()        
         let apiLoader = APILoader(apiRequest: trackApi)
         apiLoader.loadAPIRequest(requestData: [:]) { (response, error) in
             print(response as Any)
