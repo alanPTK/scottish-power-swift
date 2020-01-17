@@ -14,9 +14,15 @@ class TrackTableViewCell: UITableViewCell {
     @IBOutlet weak var lbTrackArtist: UILabel!
     @IBOutlet weak var lbTrackPrice: UILabel!
     @IBOutlet weak var ivTrackCover: UIImageView!
+    @IBOutlet weak var vContainer: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        vContainer.layer.borderColor = UIColor.borderColor().cgColor
+        vContainer.layer.borderWidth = 2.0
+        vContainer.backgroundColor = .white
+        backgroundColor = UIColor.backgroundColor()
     }
 
 }

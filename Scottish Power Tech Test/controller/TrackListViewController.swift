@@ -30,6 +30,9 @@ class TrackListViewController: UIViewController {
     
     func customizeViewStyle() {
         view.backgroundColor = UIColor.backgroundColor()
+        tvTracks.separatorColor = .clear
+
+        //tvTracks.backgroundColor = UIColor.backgroundColor()
     }
 
 }
@@ -55,13 +58,13 @@ extension TrackListViewController: UITableViewDelegate, UITableViewDataSource {
         
         trackCell.lbTrackName.text = track.trackName
         trackCell.lbTrackArtist.text = track.artistName
-        trackCell.lbTrackPrice.text = String(track.trackPrice)
+        trackCell.lbTrackPrice.text = String(track.trackPrice)        
         
         return trackCell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 120
     }
 
 }
