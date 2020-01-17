@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tdx-ZX-x7C">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tdx-ZX-x7C">
                                 <rect key="frame" x="0.0" y="60" width="320" height="492"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="trackCell" rowHeight="120" id="uVK-cO-eay" customClass="TrackTableViewCell" customModule="Scottish_Power_Tech_Test" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="trackCell" rowHeight="120" id="uVK-cO-eay" customClass="TrackTableViewCell" customModule="Scottish_Power_Tech_Test" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uVK-cO-eay" id="F15-zM-61X">
@@ -32,26 +32,26 @@
                                                     <rect key="frame" x="15" y="11" width="290" height="98"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rha-uu-4jT">
-                                                            <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                            <rect key="frame" x="4" y="4" width="90" height="90"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="78" id="C2e-Sw-h7t"/>
-                                                                <constraint firstAttribute="width" constant="98" id="tQu-LB-kNi"/>
+                                                                <constraint firstAttribute="width" constant="90" id="EKz-Qb-0Ee"/>
+                                                                <constraint firstAttribute="height" constant="90" id="GLD-iZ-ENp"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUM-K2-l5A">
-                                                            <rect key="frame" x="106" y="8" width="176" height="21"/>
+                                                            <rect key="frame" x="102" y="8" width="180" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZP-8h-Ssy">
-                                                            <rect key="frame" x="106" y="33" width="176" height="21"/>
+                                                            <rect key="frame" x="102" y="33" width="180" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4y-V8-c1m">
-                                                            <rect key="frame" x="106" y="69" width="176" height="21"/>
+                                                            <rect key="frame" x="102" y="69" width="180" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -60,16 +60,15 @@
                                                     <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="iUM-K2-l5A" firstAttribute="top" secondItem="AHe-8O-ttf" secondAttribute="top" constant="8" id="4gQ-SE-h7B"/>
-                                                        <constraint firstItem="Rha-uu-4jT" firstAttribute="leading" secondItem="AHe-8O-ttf" secondAttribute="leading" id="EVo-F9-pet"/>
+                                                        <constraint firstItem="Rha-uu-4jT" firstAttribute="leading" secondItem="AHe-8O-ttf" secondAttribute="leading" constant="4" id="EVo-F9-pet"/>
                                                         <constraint firstItem="iUM-K2-l5A" firstAttribute="leading" secondItem="Rha-uu-4jT" secondAttribute="trailing" constant="8" id="Kan-Nc-lWE"/>
                                                         <constraint firstAttribute="trailing" secondItem="J4y-V8-c1m" secondAttribute="trailing" constant="8" id="L5u-Uk-Dd7"/>
+                                                        <constraint firstItem="Rha-uu-4jT" firstAttribute="centerY" secondItem="AHe-8O-ttf" secondAttribute="centerY" id="MXW-s7-UuY"/>
                                                         <constraint firstAttribute="trailing" secondItem="nZP-8h-Ssy" secondAttribute="trailing" constant="8" id="NAU-Uq-kxK"/>
                                                         <constraint firstAttribute="trailing" secondItem="iUM-K2-l5A" secondAttribute="trailing" constant="8" id="O0b-Mx-p3W"/>
                                                         <constraint firstItem="J4y-V8-c1m" firstAttribute="leading" secondItem="Rha-uu-4jT" secondAttribute="trailing" constant="8" id="O19-hZ-aLi"/>
                                                         <constraint firstAttribute="bottom" secondItem="J4y-V8-c1m" secondAttribute="bottom" constant="8" id="R3G-c0-QMt"/>
                                                         <constraint firstItem="nZP-8h-Ssy" firstAttribute="leading" secondItem="Rha-uu-4jT" secondAttribute="trailing" constant="8" id="j23-eL-mLb"/>
-                                                        <constraint firstItem="Rha-uu-4jT" firstAttribute="top" secondItem="AHe-8O-ttf" secondAttribute="top" id="u1L-eD-cX1"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Rha-uu-4jT" secondAttribute="bottom" id="uke-1p-Xew"/>
                                                         <constraint firstItem="nZP-8h-Ssy" firstAttribute="top" secondItem="iUM-K2-l5A" secondAttribute="bottom" constant="4" id="zse-6a-egK"/>
                                                     </constraints>
                                                 </view>

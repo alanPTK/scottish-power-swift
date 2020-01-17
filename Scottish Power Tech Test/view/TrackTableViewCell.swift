@@ -24,5 +24,12 @@ class TrackTableViewCell: UITableViewCell {
         vContainer.backgroundColor = .white
         backgroundColor = UIColor.backgroundColor()
     }
+    
+    func loadTrackInformation(track: TrackModel) {
+        lbTrackName.text = track.trackName
+        lbTrackArtist.text = track.artistName
+        lbTrackPrice.text = String(track.trackPrice)
+        ivTrackCover.loadImage(withUrl: track.artworkUrl100)
+    }
 
 }

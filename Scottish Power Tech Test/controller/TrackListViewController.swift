@@ -23,22 +23,23 @@ class TrackListViewController: UIViewController {
         customizeViewStyle()
     }
     
+    /* Initialize the objects used by the view controller */
     func initObjects() {
         presenter = TrackListPresenter(delegate: self)
         presenter?.loadTracks()
     }
     
+    /* Customize the view visual style */
     func customizeViewStyle() {
         view.backgroundColor = UIColor.backgroundColor()
-        tvTracks.separatorColor = .clear
-
-        //tvTracks.backgroundColor = UIColor.backgroundColor()
+        tvTracks.separatorColor = .clear        
     }
 
 }
 
 extension TrackListViewController: TrackListDelegate {
     
+    /* Reload the table view with the fetched tracks */
     func showTracks(tracks: [TrackModel]) {
         self.tracks = tracks
         tvTracks.reloadData()
@@ -55,16 +56,18 @@ extension TrackListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let trackCell = tableView.dequeueReusableCell(withIdentifier: Constants.CELLS.trackCellIdentifier, for: indexPath) as! TrackTableViewCell
         let track = tracks[indexPath.row]
-        
-        trackCell.lbTrackName.text = track.trackName
-        trackCell.lbTrackArtist.text = track.artistName
-        trackCell.lbTrackPrice.text = String(track.trackPrice)        
+        trackCell.loadTrackInformation(track: track)                
         
         return trackCell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedTrack = tracks[indexPath.row]
+        print(selectedTrack.trackName)
     }
 
 }

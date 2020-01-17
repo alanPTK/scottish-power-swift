@@ -14,10 +14,12 @@ class TrackListPresenter: NSObject {
     private var tracks: [TrackModel] = [TrackModel]()
     private let trackApi = TrackAPI()
     
+    /* Initialize the object with the delegate */
     init(delegate: TrackListDelegate) {
         self.delegate = delegate
     }
     
+    /* Load tracks from backend */
     func loadTracks() {
         let apiLoader = APILoader(apiRequest: trackApi)
         apiLoader.loadAPIRequest(requestData: [:]) { (response, error) in
