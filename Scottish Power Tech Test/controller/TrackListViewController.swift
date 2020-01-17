@@ -19,11 +19,17 @@ class TrackListViewController: UIViewController {
         super.viewDidLoad()
         
         initObjects()
+        
+        customizeViewStyle()
     }
     
     func initObjects() {
         presenter = TrackListPresenter(delegate: self)
         presenter?.loadTracks()
+    }
+    
+    func customizeViewStyle() {
+        view.backgroundColor = UIColor.backgroundColor()
     }
 
 }
