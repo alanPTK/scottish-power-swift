@@ -13,8 +13,8 @@ class TrackListViewController: UIViewController {
     @IBOutlet weak var tvTracks: UITableView!
     
     private var presenter: TrackListPresenter?
-    private var tracks: [TrackModel] = [TrackModel]()
-    private var selectedTrack: TrackModel?
+    private var tracks: [TrackViewModel] = [TrackViewModel]()
+    private var selectedTrack: TrackViewModel?
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ class TrackListViewController: UIViewController {
 extension TrackListViewController: TrackListDelegate {
     
     /* Reload the table view with the fetched tracks */
-    func showTracks(tracks: [TrackModel]) {
+    func showTracks(tracks: [TrackViewModel]) {
         self.tracks = tracks
         tvTracks.reloadData()
     }

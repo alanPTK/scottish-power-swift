@@ -126,13 +126,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jxR-ZL-2A4">
-                                <rect key="frame" x="0.0" y="44" width="320" height="128"/>
+                                <rect key="frame" x="0.0" y="52" width="320" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="VJ2-QG-zMs"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lr8-qs-z4a">
-                                <rect key="frame" x="8" y="180" width="304" height="125"/>
+                                <rect key="frame" x="8" y="188" width="304" height="125"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUr-lf-6gh">
                                         <rect key="frame" x="0.0" y="0.0" width="304" height="21"/>
@@ -196,10 +196,11 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdx-4P-lRl">
-                                <rect key="frame" x="8" y="321" width="304" height="30"/>
+                                <rect key="frame" x="8" y="329" width="304" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="KJf-DU-Iza"/>
+                                    <constraint firstAttribute="height" constant="44" id="KJf-DU-Iza"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="More details"/>
                                 <connections>
                                     <action selector="showTrackDetails:" destination="U1N-gs-emZ" eventType="touchUpInside" id="myB-bf-XYr"/>
@@ -213,7 +214,7 @@
                             <constraint firstItem="h6l-4h-KQQ" firstAttribute="trailing" secondItem="lr8-qs-z4a" secondAttribute="trailing" constant="8" id="I4f-Uz-TWA"/>
                             <constraint firstItem="lr8-qs-z4a" firstAttribute="top" secondItem="jxR-ZL-2A4" secondAttribute="bottom" constant="8" id="IeX-Ke-NxX"/>
                             <constraint firstItem="lr8-qs-z4a" firstAttribute="leading" secondItem="h6l-4h-KQQ" secondAttribute="leading" constant="8" id="QVY-ym-aBd"/>
-                            <constraint firstItem="jxR-ZL-2A4" firstAttribute="top" secondItem="h6l-4h-KQQ" secondAttribute="top" id="fdo-C4-WOF"/>
+                            <constraint firstItem="jxR-ZL-2A4" firstAttribute="top" secondItem="h6l-4h-KQQ" secondAttribute="top" constant="8" id="fdo-C4-WOF"/>
                             <constraint firstItem="hdx-4P-lRl" firstAttribute="top" secondItem="lr8-qs-z4a" secondAttribute="bottom" constant="16" id="ogE-nm-MPd"/>
                             <constraint firstItem="hdx-4P-lRl" firstAttribute="leading" secondItem="h6l-4h-KQQ" secondAttribute="leading" constant="8" id="xfU-iY-LoR"/>
                             <constraint firstItem="h6l-4h-KQQ" firstAttribute="trailing" secondItem="jxR-ZL-2A4" secondAttribute="trailing" id="yue-Wt-WKU"/>

@@ -11,7 +11,7 @@ import UIKit
 class TrackListPresenter: NSObject {
 
     private var delegate: TrackListDelegate
-    private var tracks: [TrackModel] = [TrackModel]()
+    private var tracks: [TrackViewModel] = [TrackViewModel]()
     private let trackApi = TrackAPI()
     
     /* Initialize the object with the delegate */
@@ -25,7 +25,8 @@ class TrackListPresenter: NSObject {
         apiLoader.loadAPIRequest(requestData: [:]) { (response, error) in
             if let results = response?.results {
                 for track in results {
-                    self.tracks.append(track)
+                    let trackViewModel = TrackViewModel(trackModel: track)
+                    self.tracks.append(trackViewModel)
                 }
                 DispatchQueue.main.async {
                     self.delegate.showTracks(tracks: self.tracks)

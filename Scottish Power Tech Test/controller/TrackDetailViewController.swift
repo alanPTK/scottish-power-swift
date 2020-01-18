@@ -18,21 +18,36 @@ class TrackDetailViewController: UIViewController {
     @IBOutlet weak var lbTrackReleaseDate: UILabel!
     @IBOutlet weak var lbTrackDuration: UILabel!
     
-    var selectedTrack: TrackModel?
+    var selectedTrack: TrackViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        customizeViewStyle()
         
         loadSelectedTrackInformation()
     }
     
     func loadSelectedTrackInformation() {
-        lbTrackName.text = selectedTrack?.trackName
-        lbTrackArtist.text = selectedTrack?.artistName
-        lbTrackPrice.text = String("\(selectedTrack?.trackPrice)")
-        lbTrackReleaseDate.text = selectedTrack?.releaseDate
-        lbTrackDuration.text = String("\(selectedTrack?.trackTimeMillis)")
-        ivTrackCover.loadImage(withUrl: selectedTrack?.artworkUrl100 ?? "")
+        lbTrackName.text = selectedTrack.name
+        lbTrackArtist.text = selectedTrack.artist
+        lbTrackPrice.text = selectedTrack.price
+        lbTrackReleaseDate.text = selectedTrack.release
+        lbTrackDuration.text = selectedTrack.duration
+        ivTrackCover.loadImage(withUrl: selectedTrack.artwork)
+    }
+    
+    func customizeViewStyle() {
+        btShowTrackDetails.layer.borderWidth = 2.0
+        btShowTrackDetails.layer.borderColor = UIColor.borderColor().cgColor
+        btShowTrackDetails.layer.cornerRadius = 8.0
+        btShowTrackDetails.setTitleColor(UIColor.informationColor(), for: .normal)
+
+        lbTrackName.textColor = .black
+        lbTrackArtist.textColor = UIColor.informationColor()
+        lbTrackPrice.textColor = UIColor.informationColor()
+        lbTrackReleaseDate.textColor = UIColor.informationColor()
+        lbTrackDuration.textColor = UIColor.informationColor()
     }
         
     @IBAction func showTrackDetails(_ sender: Any) {
@@ -40,18 +55,18 @@ class TrackDetailViewController: UIViewController {
     }
     
     func showTrackDetails() {
-        guard let trackViewUrl = selectedTrack?.trackViewUrl else {
+        guard let trackUrl = selectedTrack?.url else {
             showSimpleAlert(title: NSLocalizedString("Attention", comment: ""), message: NSLocalizedString("Unable to load the track details.", comment: ""))
-            
+
             return
         }
-        
-        guard let url = URL(string: trackViewUrl) else {
+
+        guard let url = URL(string: trackUrl) else {
             showSimpleAlert(title: NSLocalizedString("Attention", comment: ""), message: NSLocalizedString("Unable to load the track details.", comment: ""))
-            
+
             return
         }
-        
+
         UIApplication.shared.open(url)
     }
         

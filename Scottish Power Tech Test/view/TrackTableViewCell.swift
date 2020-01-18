@@ -34,11 +34,11 @@ class TrackTableViewCell: UITableViewCell {
     }
     
     /* Load the data into the cell */
-    func loadTrackInformation(track: TrackModel) {
-        lbTrackName.text = track.trackName
-        lbTrackArtist.text = track.artistName
-        lbTrackPrice.text = String("\(Utils.shared.symbolForCurrency(currency: track.currency)) \(Utils.shared.formatPrice(price: track.trackPrice))")
-        ivTrackCover.loadImage(withUrl: track.artworkUrl100)                
+    func loadTrackInformation(track: TrackViewModel) {
+        lbTrackName.text = track.name
+        lbTrackArtist.text = track.artist        
+        lbTrackPrice.text = track.price
+        ivTrackCover.loadImage(withUrl: track.artwork)
     }
 
 }

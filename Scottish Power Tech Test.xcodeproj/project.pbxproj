@@ -16,6 +16,7 @@
 		DB1D08A423D2876300532E80 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D08A323D2876300532E80 /* Utils.swift */; };
 		DB1D08A623D2904E00532E80 /* TrackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D08A523D2904E00532E80 /* TrackDetailViewController.swift */; };
 		DB1D08AC23D33BD100532E80 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D08AB23D33BD100532E80 /* UIViewController+Alert.swift */; };
+		DB1D08AE23D343BC00532E80 /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D08AD23D343BC00532E80 /* TrackViewModel.swift */; };
 		DB3E092E23D20F0600400D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E092D23D20F0600400D6E /* AppDelegate.swift */; };
 		DB3E093523D20F0600400D6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3E093323D20F0600400D6E /* Main.storyboard */; };
 		DB3E093723D20F0800400D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3E093623D20F0800400D6E /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		DB1D08A323D2876300532E80 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		DB1D08A523D2904E00532E80 /* TrackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailViewController.swift; sourceTree = "<group>"; };
 		DB1D08AB23D33BD100532E80 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		DB1D08AD23D343BC00532E80 /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
 		DB3E092A23D20F0600400D6E /* Scottish Power Tech Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scottish Power Tech Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3E092D23D20F0600400D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3E093423D20F0600400D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				DB3E095323D24B4500400D6E /* ResponseModel.swift */,
+				DB1D08AD23D343BC00532E80 /* TrackViewModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				DB3E095423D24B4500400D6E /* ResponseModel.swift in Sources */,
 				DB3E094523D2391F00400D6E /* APILoader.swift in Sources */,
 				DB1D089523D25C7B00532E80 /* TrackTableViewCell.swift in Sources */,
+				DB1D08AE23D343BC00532E80 /* TrackViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

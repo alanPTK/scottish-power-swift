@@ -9,6 +9,6 @@
 protocol TrackListDelegate {
 
     /* Show the tracks fetched from the server */
-    func showTracks(tracks: [TrackModel])
+    func showTracks(tracks: [TrackViewModel])
     
 }
