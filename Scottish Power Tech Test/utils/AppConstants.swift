@@ -31,6 +31,4 @@ struct Constants {
         static let SegueToTrackDetail = "segueToTrackDetail"        
     }
     
-    
-    
 }
