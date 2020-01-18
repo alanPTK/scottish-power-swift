@@ -13,8 +13,9 @@ class TrackListViewController: UIViewController {
     @IBOutlet weak var tvTracks: UITableView!
     
     private var presenter: TrackListPresenter?
-    private var tracks: [TrackViewModel] = [TrackViewModel]()
     private var selectedTrack: TrackViewModel?
+    private lazy var tracks: [TrackViewModel] = [TrackViewModel]()
+    private lazy var emptyView = UINib(nibName: "EmptyView", bundle: nil)
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,7 @@ class TrackListViewController: UIViewController {
 
 extension TrackListViewController: TrackListDelegate {
     
-    /* Reload the table view with the fetched tracks */
+    /* Reload the table view with the server tracks */
     func showTracks(tracks: [TrackViewModel]) {
         self.tracks = tracks
         tvTracks.reloadData()
@@ -57,8 +58,22 @@ extension TrackListViewController: TrackListDelegate {
 
 extension TrackListViewController: UITableViewDelegate, UITableViewDataSource {
 
+    /* Check if there's tracks to show. If not, show a view with a message */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tracks.count
+        if self.tracks.count == 0 {
+            if let view = (emptyView.instantiate(withOwner: self, options: nil).first as? EmptyView) {
+                view.lbMessage.text = NSLocalizedString("No tracks to show. Please, check your internet connection.", comment: "")
+                view.lbMessage.textColor = UIColor.institutionalGreenColor()
+                
+                tvTracks.setEmptyView(emptyView: view)
+            }
+            
+            return 0
+        } else {
+            tvTracks.restore()
+            
+            return self.tracks.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -73,10 +88,11 @@ extension TrackListViewController: UITableViewDelegate, UITableViewDataSource {
         return 120
     }
     
+    /* When the row is selected, get the selected track and perform the segue to the detail view */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedTrack = tracks[indexPath.row]
         
-        performSegue(withIdentifier: "segueToTrackDetail", sender: nil)
+        performSegue(withIdentifier: Constants.SEGUES.SegueToTrackDetail, sender: nil)
     }
 
 }

@@ -10,8 +10,8 @@ import UIKit
 
 class TrackListPresenter: NSObject {
 
+    private lazy var tracks: [TrackViewModel] = [TrackViewModel]()
     private var delegate: TrackListDelegate
-    private var tracks: [TrackViewModel] = [TrackViewModel]()
     private let trackApi = TrackAPI()
     
     /* Initialize the object with the delegate */

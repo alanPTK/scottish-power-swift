@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIColor {
+    
     class func backgroundColor() -> UIColor {
         return UIColor(red: 249.0/255.0, green: 249.0/255.0, blue: 249.0/255.0, alpha: 1)
     }
@@ -20,4 +21,9 @@ extension UIColor {
     class func informationColor() -> UIColor {
         return UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1)
     }
+    
+    class func institutionalGreenColor() -> UIColor {
+        return UIColor(red: 97.0/255.0, green: 141.0/255.0, blue: 50.0/255.0, alpha: 1)
+    }
+    
 }
