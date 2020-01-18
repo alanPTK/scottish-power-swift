@@ -18,18 +18,27 @@ class TrackTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        vContainer.layer.borderColor = UIColor.borderColor().cgColor
-        vContainer.layer.borderWidth = 2.0
-        vContainer.backgroundColor = .white
-        backgroundColor = UIColor.backgroundColor()
+          
+        customizeCellStyle()
     }
     
+    /* Customize the cell visual style */
+    func customizeCellStyle() {
+        vContainer.layer.borderColor = UIColor.borderColor().cgColor
+        vContainer.layer.borderWidth = 2.0
+        backgroundColor = UIColor.backgroundColor()
+        
+        lbTrackName.textColor = .black
+        lbTrackArtist.textColor = UIColor.informationColor()
+        lbTrackPrice.textColor = UIColor.informationColor()
+    }
+    
+    /* Load the data into the cell */
     func loadTrackInformation(track: TrackModel) {
         lbTrackName.text = track.trackName
         lbTrackArtist.text = track.artistName
-        lbTrackPrice.text = String(track.trackPrice)
-        ivTrackCover.loadImage(withUrl: track.artworkUrl100)
+        lbTrackPrice.text = String("\(Utils.shared.symbolForCurrency(currency: track.currency)) \(Utils.shared.formatPrice(price: track.trackPrice))")
+        ivTrackCover.loadImage(withUrl: track.artworkUrl100)                
     }
 
 }

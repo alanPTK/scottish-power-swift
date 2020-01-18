@@ -16,6 +16,6 @@ struct Constants {
     
     struct CELLS {
         static let trackCellIdentifier = "trackCell"
-    }
+    }        
     
 }

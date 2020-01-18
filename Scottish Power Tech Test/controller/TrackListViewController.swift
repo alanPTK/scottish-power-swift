@@ -56,7 +56,7 @@ extension TrackListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let trackCell = tableView.dequeueReusableCell(withIdentifier: Constants.CELLS.trackCellIdentifier, for: indexPath) as! TrackTableViewCell
         let track = tracks[indexPath.row]
-        trackCell.loadTrackInformation(track: track)                
+        trackCell.loadTrackInformation(track: track)        
         
         return trackCell
     }

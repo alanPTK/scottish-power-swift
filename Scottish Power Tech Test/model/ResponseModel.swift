@@ -20,4 +20,5 @@ struct TrackModel: Response {
     var artworkUrl100: String
     var releaseDate: String
     var trackTimeMillis: Int
+    var currency: String
 }
