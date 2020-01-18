@@ -9,16 +9,15 @@
 import UIKit
 
 class Utils: NSObject {
-        
-    static let shared = Utils()
-    private let formatter = NumberFormatter()
+            
+    static private let numberFormatter = NumberFormatter()    
     
     private override init() {
         super.init()
     }
     
     /* Return the symbol for the currency identifier, eg USD -> US$ */
-    func symbolForCurrency(currency: String) -> String {
+    class func symbolForCurrency(currency: String) -> String {
         let locale = NSLocale(localeIdentifier: currency)
         if let displayName = locale.displayName(forKey: NSLocale.Key.currencySymbol, value: currency) {
             return displayName
@@ -27,13 +26,33 @@ class Utils: NSObject {
     }
     
     /* Format the price accordingly to the device locale  */
-    func formatPrice(price: Double) -> String {
-        formatter.numberStyle = .currency
-        formatter.currencySymbol = ""
-        if let formattedPrice = formatter.string(from: price as NSNumber) {
+    class func formatPrice(price: Double) -> String {
+        numberFormatter.numberStyle = .currency
+        numberFormatter.currencySymbol = ""
+        if let formattedPrice = numberFormatter.string(from: price as NSNumber) {
             return formattedPrice
         }
         return String(price)
+    }
+    
+    /* Format the date */
+    class func formatDate(date: String, formatFrom: String, formatTo: String) -> String {
+        let formatterFrom = DateFormatter()
+        formatterFrom.dateFormat = formatFrom
+        
+        let formatterTo = DateFormatter()
+        formatterTo.dateFormat = formatTo
+        
+        if let returnDate = formatterFrom.date(from: date) {
+            return formatterTo.string(from: returnDate)
+        } else {
+            return date
+        }
+    }
+    
+    /* Convert the seconds to hours, minutes and seconds components */
+    class func formatSeconds(seconds: Int) -> (Int, Int, Int) {
+      return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
     
 }

@@ -30,10 +30,10 @@ class TrackDetailViewController: UIViewController {
     
     func loadSelectedTrackInformation() {
         lbTrackName.text = selectedTrack.name
-        lbTrackArtist.text = selectedTrack.artist
+        lbTrackArtist.text = String(format: "%@ %@" , NSLocalizedString("from", comment: ""), selectedTrack.artist)
         lbTrackPrice.text = selectedTrack.price
-        lbTrackReleaseDate.text = selectedTrack.release
-        lbTrackDuration.text = selectedTrack.duration
+        lbTrackReleaseDate.text = String(format: "%@ %@", NSLocalizedString("Released", comment: ""), selectedTrack.release)
+        lbTrackDuration.text = String(format: "%@ %@", NSLocalizedString("Duration", comment: ""), selectedTrack.duration)
         ivTrackCover.loadImage(withUrl: selectedTrack.artwork)
     }
     
@@ -42,13 +42,14 @@ class TrackDetailViewController: UIViewController {
         btShowTrackDetails.layer.borderColor = UIColor.borderColor().cgColor
         btShowTrackDetails.layer.cornerRadius = 8.0
         btShowTrackDetails.setTitleColor(UIColor.informationColor(), for: .normal)
+        view.backgroundColor = UIColor.backgroundColor()
 
         lbTrackName.textColor = .black
         lbTrackArtist.textColor = UIColor.informationColor()
         lbTrackPrice.textColor = UIColor.informationColor()
         lbTrackReleaseDate.textColor = UIColor.informationColor()
         lbTrackDuration.textColor = UIColor.informationColor()
-    }
+    }        
         
     @IBAction func showTrackDetails(_ sender: Any) {
         showTrackDetails()

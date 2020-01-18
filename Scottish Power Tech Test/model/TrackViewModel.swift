@@ -29,15 +29,25 @@ extension TrackViewModel {
     }
     
     public var price: String {
-        return String("\(Utils.shared.symbolForCurrency(currency: self.trackModel.currency)) \(Utils.shared.formatPrice(price: self.trackModel.trackPrice))")
+        return String("\(Utils.symbolForCurrency(currency: self.trackModel.currency)) \(Utils.formatPrice(price: self.trackModel.trackPrice))")
     }
     
     public var duration: String {
+        let (hours, minutes, seconds) = Utils.formatSeconds(seconds: self.trackModel.trackTimeMillis / 1000)
+        
+        if minutes != 0 {
+            return "\(minutes):\(seconds)"
+        }
+        
+        if hours != 0 {
+            return "\(hours):\(minutes):\(seconds)"
+        }
+        
         return String(self.trackModel.trackTimeMillis)
     }
     
     public var release: String {
-        return self.trackModel.releaseDate
+        return Utils.formatDate(date: self.trackModel.releaseDate, formatFrom: "yyyy-MM-dd'T'HH:mm:ss'Z'", formatTo: "d MMM, yyyy")
     }
     
     public var currency: String {
