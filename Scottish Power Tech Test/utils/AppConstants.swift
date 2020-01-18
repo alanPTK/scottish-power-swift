@@ -16,6 +16,21 @@ struct Constants {
     
     struct CELLS {
         static let trackCellIdentifier = "trackCell"
-    }        
+    }
+    
+    struct STORYBOARDS {
+        static let Main = "Main"
+    }
+    
+    struct VIEWS {
+        static let TrackList = "TrackList"
+        static let TrackDetail = "TrackDetail"
+    }
+    
+    struct SEGUES {
+        static let SegueToTrackDetail = "segueToTrackDetail"        
+    }
+    
+    
     
 }

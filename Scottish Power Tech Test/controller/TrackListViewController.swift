@@ -14,6 +14,7 @@ class TrackListViewController: UIViewController {
     
     private var presenter: TrackListPresenter?
     private var tracks: [TrackModel] = [TrackModel]()
+    private var selectedTrack: TrackModel?
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,13 @@ class TrackListViewController: UIViewController {
     func customizeViewStyle() {
         view.backgroundColor = UIColor.backgroundColor()
         tvTracks.separatorColor = .clear        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.SEGUES.SegueToTrackDetail {
+            let trackDetailViewController = segue.destination as! TrackDetailViewController
+            trackDetailViewController.selectedTrack = selectedTrack
+        }
     }
 
 }
@@ -66,8 +74,9 @@ extension TrackListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedTrack = tracks[indexPath.row]
-        print(selectedTrack.trackName)
+        selectedTrack = tracks[indexPath.row]
+        
+        performSegue(withIdentifier: "segueToTrackDetail", sender: nil)
     }
 
 }
