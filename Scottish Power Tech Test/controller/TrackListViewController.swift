@@ -34,6 +34,11 @@ class TrackListViewController: UIViewController {
     /* Customize the view visual style */
     func customizeViewStyle() {
         view.backgroundColor = UIColor.backgroundColor()
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = NSLocalizedString("Back", comment: "")
+        navigationItem.backBarButtonItem = backItem
+        
         tvTracks.separatorColor = .clear        
     }
     
@@ -67,13 +72,10 @@ extension TrackListViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 tvTracks.setEmptyView(emptyView: view)
             }
-            
-            return 0
         } else {
             tvTracks.restore()
-            
-            return self.tracks.count
         }
+        return self.tracks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

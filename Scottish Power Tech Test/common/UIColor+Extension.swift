@@ -23,7 +23,7 @@ extension UIColor {
     }
     
     class func institutionalGreenColor() -> UIColor {
-        return UIColor(red: 97.0/255.0, green: 141.0/255.0, blue: 50.0/255.0, alpha: 1)
+        return UIColor(red: 87.0/255.0, green: 136/255.0, blue: 48.0/255.0, alpha: 1)
     }
     
 }
