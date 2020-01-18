@@ -12,21 +12,15 @@ class APILoader<T: APIHandler > {
     
     let apiRequest: T
     let urlSession: URLSession
-    let reachability: Reachability
     
-    /* Initialize the loader the loader with the selected request and the session */
-    init(apiRequest: T, urlSession: URLSession = .shared, reachability: Reachability = Reachability()!) {
+    /* Initialize the loader with the selected request and the session */
+    init(apiRequest: T, urlSession: URLSession = .shared) {
         self.apiRequest = apiRequest
         self.urlSession = urlSession
-        self.reachability = reachability
     }
     
     /* Load the information from server with the request parameters */
     func loadAPIRequest(requestData: T.RequestDataType, completionHandler: @escaping (T.ResponseDataType?, Error?) -> ()) {
-        if reachability.connection == .none {
-            return completionHandler(nil, NetworkError(message: "No internet connection"))
-        }
-        
         let urlRequest = apiRequest.makeRequest(with: requestData).urlRequest
         urlSession.dataTask(with: urlRequest) { data, response, error in
             guard let data = data else { return completionHandler(nil, error) }

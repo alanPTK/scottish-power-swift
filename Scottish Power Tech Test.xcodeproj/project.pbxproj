@@ -27,7 +27,6 @@
 		DB3E094323D2391100400D6E /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094223D2391100400D6E /* APIHandler.swift */; };
 		DB3E094523D2391F00400D6E /* APILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094423D2391F00400D6E /* APILoader.swift */; };
 		DB3E094723D2392F00400D6E /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094623D2392F00400D6E /* BaseRequest.swift */; };
-		DB3E094923D2394400400D6E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094823D2394400400D6E /* Reachability.swift */; };
 		DB3E094B23D23AC900400D6E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094A23D23AC900400D6E /* NetworkError.swift */; };
 		DB3E094E23D23CC600400D6E /* TrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E094D23D23CC600400D6E /* TrackAPI.swift */; };
 		DB3E095123D23DA300400D6E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E095023D23DA300400D6E /* AppConstants.swift */; };
@@ -68,7 +67,6 @@
 		DB3E094223D2391100400D6E /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		DB3E094423D2391F00400D6E /* APILoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILoader.swift; sourceTree = "<group>"; };
 		DB3E094623D2392F00400D6E /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
-		DB3E094823D2394400400D6E /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		DB3E094A23D23AC900400D6E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		DB3E094D23D23CC600400D6E /* TrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackAPI.swift; sourceTree = "<group>"; };
 		DB3E095023D23DA300400D6E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 		DB3E094C23D23B2B00400D6E /* common */ = {
 			isa = PBXGroup;
 			children = (
-				DB3E094823D2394400400D6E /* Reachability.swift */,
 				DB1D089F23D2721C00532E80 /* UIColor+Extension.swift */,
 				DB1D08A123D27D0D00532E80 /* UIImageView+LoadFromServer.swift */,
 				DB1D08AB23D33BD100532E80 /* UIViewController+Alert.swift */,
@@ -345,7 +342,6 @@
 				DB3E094723D2392F00400D6E /* BaseRequest.swift in Sources */,
 				DB3E094B23D23AC900400D6E /* NetworkError.swift in Sources */,
 				DB3E094323D2391100400D6E /* APIHandler.swift in Sources */,
-				DB3E094923D2394400400D6E /* Reachability.swift in Sources */,
 				DB1D08A423D2876300532E80 /* Utils.swift in Sources */,
 				DB1D08A623D2904E00532E80 /* TrackDetailViewController.swift in Sources */,
 				DB1D08AC23D33BD100532E80 /* UIViewController+Alert.swift in Sources */,
