@@ -19,7 +19,7 @@ class TrackListPresenter: NSObject {
         self.delegate = delegate
     }
     
-    /* Load tracks from backend */
+    /* Load tracks from server */
     func loadTracks() {
         let apiLoader = APILoader(apiRequest: trackApi)
         apiLoader.loadAPIRequest(requestData: [:]) { (response, error) in
@@ -33,6 +33,11 @@ class TrackListPresenter: NSObject {
                 }
             }
         }
+    }
+    
+    /* When a track is selected on the view, process the information and ask for the details */
+    func onSelect(selectedTrack track: TrackViewModel) {
+        delegate.showDetailFor(selectedTrack: track)
     }
     
 }

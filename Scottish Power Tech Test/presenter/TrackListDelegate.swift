@@ -11,4 +11,7 @@ protocol TrackListDelegate {
     /* Show the tracks fetched from the server */
     func showTracks(tracks: [TrackViewModel])
     
+    /* Show the track details */
+    func showDetailFor(selectedTrack track: TrackViewModel)            
+    
 }

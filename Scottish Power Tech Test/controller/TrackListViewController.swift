@@ -59,6 +59,12 @@ extension TrackListViewController: TrackListDelegate {
         tvTracks.reloadData()
     }
     
+    /* Perform the segue to the detail view with the selected track */
+    func showDetailFor(selectedTrack track: TrackViewModel) {
+        self.selectedTrack = track
+        performSegue(withIdentifier: Constants.SEGUES.SegueToTrackDetail, sender: nil)
+    }
+    
 }
 
 extension TrackListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -78,6 +84,7 @@ extension TrackListViewController: UITableViewDelegate, UITableViewDataSource {
         return self.tracks.count
     }
     
+    /* Instantiate the cell and show the track content */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let trackCell = tableView.dequeueReusableCell(withIdentifier: Constants.CELLS.trackCellIdentifier, for: indexPath) as! TrackTableViewCell
         let track = tracks[indexPath.row]
@@ -90,11 +97,9 @@ extension TrackListViewController: UITableViewDelegate, UITableViewDataSource {
         return 120
     }
     
-    /* When the row is selected, get the selected track and perform the segue to the detail view */
+    /* When the row is selected, get the selected track and send it to the presenter */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedTrack = tracks[indexPath.row]
-        
-        performSegue(withIdentifier: Constants.SEGUES.SegueToTrackDetail, sender: nil)
+        presenter?.onSelect(selectedTrack: tracks[indexPath.row])
     }
 
 }

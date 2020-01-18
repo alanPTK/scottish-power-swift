@@ -42,11 +42,7 @@ class TrackDetailViewController: UIViewController {
     func customizeViewStyle() {
         btShowTrackDetails.backgroundColor = UIColor.institutionalGreenColor()
         btShowTrackDetails.setTitleColor(.white, for: .normal)
-        //btShowTrackDetails.layer.borderWidth = 2.0
-        //btShowTrackDetails.layer.borderColor = UIColor.borderColor().cgColor
         btShowTrackDetails.layer.cornerRadius = 8.0
-        //btShowTrackDetails.setTitleColor(UIColor.informationColor(), for: .normal)
-        
         btShowTrackDetails.setTitle(NSLocalizedString("More details", comment: ""), for: .normal)
         
         view.backgroundColor = UIColor.backgroundColor()
@@ -75,7 +71,7 @@ class TrackDetailViewController: UIViewController {
 
             return
         }
-
+        
         UIApplication.shared.open(url)
     }
         

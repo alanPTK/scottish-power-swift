@@ -163,17 +163,17 @@
 		DB3E092C23D20F0600400D6E /* Scottish Power Tech Test */ = {
 			isa = PBXGroup;
 			children = (
-				DB1D089A23D25CBA00532E80 /* presenter */,
-				DB1D089723D25C8C00532E80 /* controller */,
-				DB1D089623D25C7F00532E80 /* view */,
-				DB3E095223D24B3400400D6E /* model */,
-				DB3E094F23D23D8F00400D6E /* utils */,
-				DB3E094C23D23B2B00400D6E /* common */,
-				DB3E094123D238F800400D6E /* network */,
-				DB1D08A823D290FE00532E80 /* storyboard */,
 				DB3E092D23D20F0600400D6E /* AppDelegate.swift */,
-				DB1D08A723D290F000532E80 /* resources */,
+				DB3E094C23D23B2B00400D6E /* common */,
+				DB1D089723D25C8C00532E80 /* controller */,
 				DB3E093B23D20F0800400D6E /* Info.plist */,
+				DB3E095223D24B3400400D6E /* model */,
+				DB3E094123D238F800400D6E /* network */,
+				DB1D089A23D25CBA00532E80 /* presenter */,
+				DB1D08A723D290F000532E80 /* resources */,
+				DB1D08A823D290FE00532E80 /* storyboard */,
+				DB3E094F23D23D8F00400D6E /* utils */,
+				DB1D089623D25C7F00532E80 /* view */,
 			);
 			path = "Scottish Power Tech Test";
 			sourceTree = "<group>";
