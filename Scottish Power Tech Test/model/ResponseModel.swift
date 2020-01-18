@@ -21,4 +21,5 @@ struct TrackModel: Response {
     var releaseDate: String
     var trackTimeMillis: Int
     var currency: String
+    var trackViewUrl: String
 }
