@@ -29,10 +29,14 @@ class TrackListPresenter: NSObject {
                     self.tracks.append(trackViewModel)
                 }
                 DispatchQueue.main.async {
-                    self.delegate.showTracks(tracks: self.tracks)
+                    self.showTracks()
                 }
             }
         }
+    }
+    
+    func showTracks() {
+        self.delegate.showTracks(tracks: self.tracks)
     }
     
     /* When a track is selected on the view, process the information and ask for the details */
