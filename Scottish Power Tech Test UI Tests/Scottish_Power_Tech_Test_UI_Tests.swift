@@ -25,8 +25,9 @@ class Scottish_Power_Tech_Test_UI_Tests: XCTestCase {
     func testSelectTrack() {
         let app = XCUIApplication()
         
-        //tap the first cell
-        app.tables.staticTexts["Rock"].tap()
+        //tap the first cell of the table view
+        let firstCell = app.tables.children(matching:.any).element(boundBy: 0)
+        firstCell.tap()
         
         //if the segue works as desired, then the next screen should have a button called 'More details'
         XCTAssertTrue(app.buttons["More details"].exists)
@@ -36,7 +37,8 @@ class Scottish_Power_Tech_Test_UI_Tests: XCTestCase {
         let app = XCUIApplication()
         
         //tap the first cell of the table view
-        app.tables.staticTexts["Rock"].tap()
+        let firstCell = app.tables.children(matching:.any).element(boundBy: 0)
+        firstCell.tap()
         
         //tap the more details button
         app.buttons["More details"].tap()
@@ -49,7 +51,8 @@ class Scottish_Power_Tech_Test_UI_Tests: XCTestCase {
         let app = XCUIApplication()
         
         //tap the first cell of the table view
-        app.tables.staticTexts["Rock"].tap()
+        let firstCell = app.tables.children(matching:.any).element(boundBy: 0)
+        firstCell.tap()
         
         //get back button from navigation bar
         let backButton = app.navigationBars["Scottish_Power_Tech_Test.TrackDetailView"].buttons["Back"]

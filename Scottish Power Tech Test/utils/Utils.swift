@@ -16,7 +16,7 @@ class Utils: NSObject {
         super.init()
     }
     
-    /* Return the symbol for the currency identifier, eg USD -> US$ */
+    /* Return the symbol for the currency identifier, eg USD -> $ */
     class func symbolForCurrency(currency: String) -> String {
         let locale = NSLocale(localeIdentifier: currency)
         if let displayName = locale.displayName(forKey: NSLocale.Key.currencySymbol, value: currency) {
@@ -30,9 +30,9 @@ class Utils: NSObject {
         numberFormatter.numberStyle = .currency
         numberFormatter.currencySymbol = ""
         if let formattedPrice = numberFormatter.string(from: price as NSNumber) {
-            return formattedPrice
+            return formattedPrice.trimmingCharacters(in: .whitespacesAndNewlines)
         }
-        return String(price)
+        return String(price).trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     /* Format the date */

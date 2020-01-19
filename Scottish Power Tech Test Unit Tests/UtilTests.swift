@@ -21,7 +21,7 @@ class UtilTests: XCTestCase {
 
     func testCurrencySymbol() {
         let currency = "USD"
-        let expectedOutput = "US$"
+        let expectedOutput = "$"
         let result = Utils.symbolForCurrency(currency: currency)
                 
         XCTAssertTrue(result == expectedOutput)

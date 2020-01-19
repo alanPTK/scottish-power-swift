@@ -49,9 +49,13 @@ class TrackListPresenterTests: XCTestCase {
         trackListPresenter.showTracks()
     }
     
+    func thenTheLoadingMessageIsHidden() {
+        XCTAssertTrue(trackListViewController.hideLoadingMessageHasBeenCalled)
+    }
+    
     func thenTheTrackListIsDisplayed() {
         XCTAssertTrue(trackListViewController.showTracksHasBeenCalled)
-    }
+    }    
     
     func whenATrackIsSelected() {
         trackListPresenter.onSelect(selectedTrack: sampleTrack)
