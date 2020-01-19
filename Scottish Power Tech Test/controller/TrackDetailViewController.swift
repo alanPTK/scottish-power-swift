@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SafariServices
 
-class TrackDetailViewController: UIViewController {
+class TrackDetailViewController: UIViewController, SFSafariViewControllerDelegate {
 
     @IBOutlet weak var ivTrackCover: UIImageView!
     @IBOutlet weak var lbTrackName: UILabel!
@@ -72,7 +73,16 @@ class TrackDetailViewController: UIViewController {
             return
         }
         
-        UIApplication.shared.open(url)
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.delegate = self
+
+        present(safariViewController, animated: true)
+        
+        //UIApplication.shared.open(url)
+    }
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
         
 }
