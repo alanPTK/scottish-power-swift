@@ -15,7 +15,7 @@ class TrackListViewController: UIViewController {
     private var presenter: TrackListPresenter?
     private var selectedTrack: TrackViewModel?
     private lazy var tracks: [TrackViewModel] = [TrackViewModel]()
-    private lazy var emptyView = UINib(nibName: "EmptyView", bundle: nil)
+    private lazy var emptyView = UINib(nibName: Constants.VIEWS.EmptyView, bundle: nil)
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +63,18 @@ extension TrackListViewController: TrackListDelegate {
     func showDetailFor(selectedTrack track: TrackViewModel) {
         self.selectedTrack = track
         performSegue(withIdentifier: Constants.SEGUES.SegueToTrackDetail, sender: nil)
+    }
+    
+    func showErrorMessage(message: String) {
+        showSimpleAlert(title: NSLocalizedString("Attention", comment: ""), message: message)
+    }
+    
+    func showLoadingMessage(message: String) {
+        print("showLoadingMessage")
+    }
+    
+    func hideLoadingMessage() {
+        print("hideLoadingMessage")
     }
     
 }

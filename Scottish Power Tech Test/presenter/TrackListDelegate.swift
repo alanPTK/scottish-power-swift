@@ -12,6 +12,15 @@ protocol TrackListDelegate {
     func showTracks(tracks: [TrackViewModel])
     
     /* Show the track details */
-    func showDetailFor(selectedTrack track: TrackViewModel)            
+    func showDetailFor(selectedTrack track: TrackViewModel)
+    
+    /* Show a message while the tracks are loading */
+    func showLoadingMessage(message: String)
+    
+    /* Hide the loading message */
+    func hideLoadingMessage()
+    
+    /* Show a message if an error happens */
+    func showErrorMessage(message: String)
     
 }

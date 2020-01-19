@@ -21,6 +21,8 @@ class TrackListPresenter: NSObject {
     
     /* Load tracks from server */
     func loadTracks() {
+        delegate.showLoadingMessage(message: NSLocalizedString("Loading tracks...", comment: ""))
+        
         let apiLoader = APILoader(apiRequest: trackApi)
         apiLoader.loadAPIRequest(requestData: [:]) { (response, error) in
             if let results = response?.results {
@@ -36,7 +38,8 @@ class TrackListPresenter: NSObject {
     }
     
     func showTracks() {
-        self.delegate.showTracks(tracks: self.tracks)
+        delegate.hideLoadingMessage()
+        delegate.showTracks(tracks: self.tracks)
     }
     
     /* When a track is selected on the view, process the information and ask for the details */

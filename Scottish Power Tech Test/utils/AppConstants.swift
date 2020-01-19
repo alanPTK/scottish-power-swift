@@ -25,6 +25,7 @@ struct Constants {
     struct VIEWS {
         static let TrackList = "TrackList"
         static let TrackDetail = "TrackDetail"
+        static let EmptyView = "EmptyView"        
     }
     
     struct SEGUES {
