@@ -18,7 +18,7 @@ class TrackListViewController: UIViewController {
     private var selectedTrack: TrackViewModel?
     private lazy var tracks: [TrackViewModel] = [TrackViewModel]()
     private lazy var emptyView = UINib(nibName: Constants.VIEWS.EmptyView, bundle: nil)
-    private var showEmptyViewIfNeeded = false
+    private var showEmptyViewIfNeeded = false    
         
     override func viewDidLoad() {
         super.viewDidLoad()

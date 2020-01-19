@@ -8,6 +8,7 @@
 
 import UIKit
 
+//temporary cache
 let imageCache = NSCache<NSString, AnyObject>()
 
 extension UIImageView {
@@ -19,19 +20,23 @@ extension UIImageView {
         // check if image exists in cache
         if let cachedImage = imageCache.object(forKey: urlString as NSString) as? UIImage {
             self.image = cachedImage
+            
             return
         }
 
         // if the image don't exists, download from url
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
             if error != nil {
-                print(error!)
+                DispatchQueue.main.async {
+                    self.image = UIImage(named: "thumbnail")
+                }
                 return
             }
 
             DispatchQueue.main.async {
                 if let image = UIImage(data: data!) {
                     imageCache.setObject(image, forKey: urlString as NSString)
+                    
                     self.image = image
                 }
             }
