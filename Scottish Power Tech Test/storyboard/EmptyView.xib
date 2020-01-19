@@ -14,15 +14,15 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Omw-KG-UuA">
-                    <rect key="frame" x="85" y="209" width="150" height="150"/>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Omw-KG-UuA">
+                    <rect key="frame" x="85" y="159" width="150" height="150"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="49Z-wY-9wa"/>
                         <constraint firstAttribute="height" constant="150" id="sqW-BP-xff"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg4-sy-KoY">
-                    <rect key="frame" x="8" y="367" width="304" height="20.5"/>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg4-sy-KoY">
+                    <rect key="frame" x="8" y="317" width="304" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -33,11 +33,12 @@
                 <constraint firstItem="Fg4-sy-KoY" firstAttribute="top" secondItem="Omw-KG-UuA" secondAttribute="bottom" constant="8" id="B7Q-AK-V1g"/>
                 <constraint firstItem="Fg4-sy-KoY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="CLJ-Vd-osi"/>
                 <constraint firstItem="Omw-KG-UuA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FF3-sl-D07"/>
-                <constraint firstItem="Omw-KG-UuA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="GBs-em-GK8"/>
+                <constraint firstItem="Omw-KG-UuA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-50" id="GBs-em-GK8"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Fg4-sy-KoY" secondAttribute="trailing" constant="8" id="Hru-1c-Te7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="ivLogo" destination="Omw-KG-UuA" id="8Xb-0h-dwd"/>
                 <outlet property="lbMessage" destination="Fg4-sy-KoY" id="hlC-eV-5cq"/>
             </connections>
             <point key="canvasLocation" x="139" y="125"/>

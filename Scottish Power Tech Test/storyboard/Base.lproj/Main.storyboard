@@ -97,18 +97,35 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="eUp-Wf-Jdf"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="iZZ-3X-fck">
+                                <rect key="frame" x="0.0" y="262" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2u8-R2-JBe">
+                                <rect key="frame" x="0.0" y="314" width="320" height="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="2u8-R2-JBe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="01t-Sy-buh"/>
+                            <constraint firstItem="2u8-R2-JBe" firstAttribute="top" secondItem="iZZ-3X-fck" secondAttribute="bottom" constant="8" id="2HS-t1-1X7"/>
                             <constraint firstItem="Tdx-ZX-x7C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="71y-iM-K1j"/>
                             <constraint firstItem="Tdx-ZX-x7C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="V6G-AY-oWa"/>
+                            <constraint firstItem="2u8-R2-JBe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XWx-nm-M37"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tdx-ZX-x7C" secondAttribute="trailing" id="dbx-ch-LkA"/>
+                            <constraint firstItem="2u8-R2-JBe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="okz-Qa-RfK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tdx-ZX-x7C" secondAttribute="bottom" constant="16" id="zym-dO-z0U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Rock Tracks" id="L1Z-z6-bR4"/>
                     <connections>
+                        <outlet property="aiLoadingIndicator" destination="iZZ-3X-fck" id="91u-ux-x89"/>
+                        <outlet property="lbLoadingMessage" destination="2u8-R2-JBe" id="2ab-po-x1V"/>
                         <outlet property="tvTracks" destination="Tdx-ZX-x7C" id="yX5-Xr-gOb"/>
                         <segue destination="U1N-gs-emZ" kind="show" identifier="segueToTrackDetail" id="1ML-H1-lxz"/>
                     </connections>

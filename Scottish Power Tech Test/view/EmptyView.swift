@@ -10,6 +10,7 @@ import UIKit
 
 class EmptyView: UIView {
     
-    @IBOutlet weak var lbMessage: UILabel!    
+    @IBOutlet weak var lbMessage: UILabel!
+    @IBOutlet weak var ivLogo: UIImageView!
 
 }

@@ -25,13 +25,20 @@ class TrackListPresenter: NSObject {
         
         let apiLoader = APILoader(apiRequest: trackApi)
         apiLoader.loadAPIRequest(requestData: [:]) { (response, error) in
-            if let results = response?.results {
-                for track in results {
-                    let trackViewModel = TrackViewModel(trackModel: track)
-                    self.tracks.append(trackViewModel)
-                }
+            if error != nil {
                 DispatchQueue.main.async {
-                    self.showTracks()
+                    self.delegate.hideLoadingMessage()
+                    self.delegate.showErrorMessage(message: NSLocalizedString("Failed to load the tracks. Please, try again.", comment: ""))
+                }
+            } else {
+                if let results = response?.results {
+                    for track in results {
+                        let trackViewModel = TrackViewModel(trackModel: track)
+                        self.tracks.append(trackViewModel)
+                    }
+                    DispatchQueue.main.async {
+                        self.showTracks()
+                    }
                 }
             }
         }
