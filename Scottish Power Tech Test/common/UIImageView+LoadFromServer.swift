@@ -15,7 +15,7 @@ extension UIImageView {
     
     func loadImage(withUrl urlString : String) {
         let url = URL(string: urlString)
-        self.image = nil
+        self.image = UIImage(named: "thumbnail")
 
         // check if image exists in cache
         if let cachedImage = imageCache.object(forKey: urlString as NSString) as? UIImage {
