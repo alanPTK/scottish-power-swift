@@ -33,3 +33,5 @@ struct Constants {
     }
     
 }
+
+typealias APIHandler = RequestHandler & ResponseHandler

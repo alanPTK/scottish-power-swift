@@ -97,13 +97,13 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="eUp-Wf-Jdf"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="iZZ-3X-fck">
-                                <rect key="frame" x="0.0" y="262" width="320" height="44"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="iZZ-3X-fck">
+                                <rect key="frame" x="142" y="266" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2u8-R2-JBe">
-                                <rect key="frame" x="0.0" y="314" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="311" width="320" height="46"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class APILoader<T: APIHandler > {
+class APILoader<T: APIHandler> {
     
     let apiRequest: T
     let urlSession: URLSession
